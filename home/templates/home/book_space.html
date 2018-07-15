@@ -1,0 +1,14 @@
+{% extends "home/base.html" %}
+{% load home_tags %}
+
+{%block content%}
+ <div class="container">
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-9 col-sm-12">
+        {% include "home/includes/book_space_form.html" %}
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+{%endblock%}

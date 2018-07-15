@@ -1,0 +1,21 @@
+{% load i18n %}
+{% if blogs %}
+
+
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-sm-12 news">
+        <h2><a href="/blog">{% trans 'Our News' %}</a></h2>
+      </div>
+    </div>
+    <div class="row">
+      {% for blog in blogs %}
+        {% include "home/includes/home_blog_list_item.html" %}
+      {% endfor %}
+    </div>
+</div>
+
+
+{% endif %}
+
+

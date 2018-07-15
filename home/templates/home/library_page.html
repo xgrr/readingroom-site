@@ -1,0 +1,40 @@
+{% extends "home/base.html" %}
+{% load home_tags wagtailcore_tags %}
+{% load i18n %}
+
+{%block content%}
+{% include "home/includes/home_blocks.html" with home_blocks=self.home_blocks.all only %}
+
+<div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-sm-12 card-y-margin">
+            <div class="xgrr-card module">
+
+                    <h2 class="heading-5 text-family-sans">{% trans 'Interactive Space' %}</h2>
+                    <img src="/static/home/images/group_meet.jpg" alt="Xanana Gusmao Reading Room" class="img-circle body-image">
+                    <p class="text-size-xs text-family-sans">{% trans 'In our interactive space, we would like to have a book club, conduct user surveys and promote discussion around a vast array of topics. Sign up as a member to find out more.' %}</p>
+
+                    <a href="/become-member/" class="btn bg-green bg-green-hover border-none p-y-1 p-x-3 border-radius text-weight-bold">{% trans 'Become a Member' %}</a>
+
+
+                </div>
+
+        </div>
+
+        <div class="col-lg-4 col-sm-6 card-y-margin">
+            <div class="module xgrr-card">
+                <div>
+                    <h2 class="heading-5 text-family-sans">{% trans 'The Library' %}</h2>
+                </div>
+                <p>
+                  <strong>{% trans 'Open Hours' %}</strong><br>
+                  {% trans 'Monday–Saturday: 9am – 5pm' %}<br>
+                  {% trans 'Sunday: Closed' %}
+                </p>
+                <p>{% trans 'The Reading Room is closed on public holidays in Timor-Leste.' %}*</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

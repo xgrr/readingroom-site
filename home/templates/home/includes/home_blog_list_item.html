@@ -1,0 +1,24 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+
+
+ <div class="col-lg-4 col-sm-12">
+  <a href="{% pageurl blog %}" aria-label="{{ blog.title }}">
+    <div class="news-card">
+         {% if blog.feed_image %}
+          <div class="card-image">
+            {% image blog.feed_image width-500 as img %}
+            <img class="card-img-top" style="width:100%" src="{{ img.url }}" alt="{{ blog.title }}">
+
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <h4>{{ blog.title }}</h4>
+             <div class="card-text">
+                <p>{{ blog.tease|truncatechars:100|richtext }}</p>
+            </div>
+            <h5 class="news-date">{{ blog.date|date:"F d, Y"  }}</h5>
+
+        </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load i18n %}
+
+  <div class="col-lg-4 col-sm-12">
+      <div class="event-card">
+          {% if event.feed_image %}
+          <div class="card-image">
+            <a href="{% pageurl event %}" aria-label="{{ event.title }}">
+              {% image event.feed_image width-500 as img %}
+              <img class="card-img-top" style="width:100%" src="{{ img.url }}" alt="{{ event.title }}"/>
+            </a>
+          </div>
+          {% endif %}
+          <div class="card-content">
+            <h4><a href="{% pageurl event %}" aria-label="{{ event.title }}">{{ event.title }}</a></h4>
+              <div class="card-text">
+                {% if event.body %}
+                <p>{{ event.body|richtext|truncatechars:250 }}</p>
+                {% endif %}
+              </div>
+              <h5 class="news-date">
+                {{ event.date_from|date:"F d, Y"  }} {% if event.date_to %} - {{ event.date_to|date:"F d, Y" }}{% endif %} {{ event.time_from|date:"fA" }} - {{event.time_to|date:"fA"}}</h5>
+          </div>
+    </div>
+  </div>
+
+</div>
+

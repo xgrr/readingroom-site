@@ -1,0 +1,43 @@
+{% extends "home/base.html" %}
+
+{% load wagtailcore_tags %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="container">
+      <div class="row section">
+        <div class="col-lg-12 col-sm-12">
+          <div class="blog-center">
+            <div class="event-headline">
+              <div class="event-headline-content">
+                <h1><a href="{% pageurl blogs.0 %}">{{blogs.0.title}}</a></h1>
+                <div class="event-title-date">
+                  <span>{{blogs.0.date}}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <div class="container">
+      <div class="row">
+
+       {% for blog in blogs %}
+          {% include "home/includes/home_blog_list_item.html" %}
+        {% empty %}
+            {% trans 'No blogs found' %}
+        {% endfor %}
+
+
+        </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% load wagtailcore_tags %}
+
+{% if intro %}
+  <div class="container">
+      <div class="row section">
+        <div class="col-lg-12 col-sm-12">
+          <div class="card-whole">
+            <div class="card-block">
+               <p class="smallText">
+                  {{ intro|richtext }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endif %}
+
+
+

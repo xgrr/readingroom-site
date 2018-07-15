@@ -1,0 +1,36 @@
+{% load home_tags wagtailcore_tags wagtailimages_tags %}
+{% load i18n %}
+<div class="container">
+      <div class="row section">
+        <div class="col-lg-12 col-sm-12">
+          <div class="event-center-column">
+            <div class="event-headline">
+              <div class="event-headline-content">
+                <h1>{{ self.title}}</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+     <div class="container">
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 col-sm-12 text-just">
+          <p>  {{ self.body|richtext }}</p>
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+
+      <div class="row section">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 col-sm-12 center">
+        <h4><a href="/museum/permanent-exhibitions">{% trans 'View All Permanent Exhibitions' %}</a></h4>
+
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>

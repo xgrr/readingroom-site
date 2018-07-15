@@ -1,0 +1,43 @@
+{% extends "home/base.html" %}
+{% load home_tags %}
+{% load i18n %}
+{%block content%}
+{% include "home/includes/home_blocks.html" with home_blocks=self.home_blocks.all only %}
+
+
+<div class="container">
+      <div class="row">
+
+        <div class="col-lg-8 col-sm-12 card-y-margin">
+            <div class="xgrr-card module">
+
+                    <h2 class="heading-5 text-family-sans">{% trans 'Book Exhibition Space' %}</h2>
+                    <img src="/static/home/images/reading_room_square.jpg" alt="Xanana Gusmao Reading Room" class="img-circle body-image">
+                    <p class="text-size-xs text-family-sans">{% trans 'We would love to discuss having your exhibition in our space. Inquire today!' %}</p>
+                <div class="text-white">
+                    <a href="/about/book-our-space/" class="btn bg-green bg-green-hover border-none p-y-1 p-x-3 border-radius text-weight-bold">{% trans 'Book Now' %}</a>
+                </div>
+                </div>
+
+        </div>
+
+        <div class="col-lg-4 col-sm-12 card-y-margin">
+            <div class="module xgrr-card">
+                <div>
+                    <h2 class="heading-5 text-family-sans">{% trans 'The Museum' %}</h2>
+                </div>
+                <p>
+                  <strong>{% trans 'Open Hours' %}</strong><br>
+                  {% trans 'Monday–Saturday: 9am – 5pm' %}<br>
+                  {% trans 'Sunday: Closed' %}
+                </p>
+                <p>{% trans 'The Reading Room is closed on public holidays in Timor-Leste.' %}*</p>
+                <div class="text-white">
+
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+{%endblock%}

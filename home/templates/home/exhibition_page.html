@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+{% load home_tags wagtailcore_tags wagtailimages_tags %}
+
+ {% block intro%}
+
+ {%endblock%}
+
+{% block content %}
+
+      {% if self.is_permanent %}
+       {%include "home/permanent_exhibition_page.html"%}
+      {%else%}
+        {%include "home/temporary_exhibition_page.html"%}
+      {%endif%}
+
+{% endblock %}

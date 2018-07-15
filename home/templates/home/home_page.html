@@ -1,0 +1,48 @@
+{% extends "home/base.html" %}
+{% load home_tags %}
+{% load i18n %}
+
+{%block content%}
+
+  {% include "home/includes/home_blocks.html" with home_blocks=self.home_blocks.all only %}
+
+
+{% event_listing_homepage %}
+
+
+{% blog_listing_homepage %}
+
+
+
+
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-sm-6 card-y-margin">
+            <div class="xgrr-card module">
+
+                    <h2 class="heading-5 text-family-sans">{% trans 'Stay in Touch' %}</h2>
+                    <p class="text-size-xs text-family-sans">{% trans 'The Xanana Gusmão Reading Room is a free for the public library, museum and community space in Dili, Timor-Leste. The Reading Room was opened in June of 2000 by founder Kirsty Sword-Gusmão with the goal of being a safe, open space for the community to learn and thrive- a culture that continues to be upheld today in everything that we do. Sign up to our newsletter to keep in touch with what we are doing.' %}</p>
+
+                    <a href="/become-member/" class="btn bg-green bg-green-hover border-none p-y-1 p-x-3 border-radius text-weight-bold">{% trans 'Become a Member' %}</a>
+                </div>
+
+        </div>
+
+        <div class="col-lg-4 col-sm-6 card-y-margin">
+            <div class="module xgrr-card">
+                <div>
+
+                    <h2 class="heading-5 text-family-sans">{% trans 'The Library' %}</h2>
+                </div>
+                <p>
+                  <strong>{% trans 'Open Hours' %}</strong><br>
+                  {% trans 'Monday–Saturday: 9am – 5pm' %}<br>
+                  {% trans 'Sunday: Closed' %}
+                </p>
+                <p>{% trans 'The Xanana Gusmão Reading Room is closed on public holidays in Timor-Leste.' %}</p>
+
+            </div>
+        </div>
+      </div>
+    </div>
+{%endblock%}

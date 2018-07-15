@@ -1,0 +1,45 @@
+{% load i18n %}
+<div class="page-header"><h3>Contact</h3></div>
+<div class="row">
+    <dl>
+        <div class="col-sm-4">
+            {% if contact.address_1 %}
+                <dt>{% trans 'Address' %} 1</dt>
+                <dd>{{ contact.address_1 }}</dd>
+            {% endif %}
+
+            {% if contact.address_2 %}
+                <dt>{% trans 'Address' %} 2</dt>
+                <dd>{{ contact.address_2 }}</dd>
+            {% endif %}
+
+            {% if contact.city %}
+                <dt>{% trans 'City' %}</dt>
+                <dd>{{ contact.city }}</dd>
+            {% endif %}
+
+            {% if contact.country %}
+                <dt>{% trans 'Country' %}</dt>
+                <dd>{{ contact.country }}</dd>
+            {% endif %}
+
+            {% if contact.post_code %}
+                <dt>{% trans 'Post Code' %}</dt>
+                <dd>{{ contact.post_code }}</dd>
+            {% endif %}
+        </div>
+        <div class="col-sm-4">
+            {% if contact.telephone %}
+                <dt>{% trans 'Telephone' %}</dt>
+                <dd>{{ contact.telephone }}</dd>
+            {% endif %}
+
+            {% if contact.email %}
+                <dt>{% trans 'Email' %}</dt>
+                <dd>{{ contact.email }}</dd>
+            {% endif %}
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </dl>
+</div>

@@ -1,0 +1,23 @@
+{% load i18n %}
+{% if events %}
+ <div class="container ">
+     <div class="row">
+        <div class="col-lg-4 col-sm-12 events">
+          <h2 class="card-title"><a href="/events" aria-label="Upcoming Events">{% trans 'Events at XGRR' %}</a></h2>
+        </div>
+      </div>
+     <div class="row event-container">
+         {% for event in events %}
+        {% include "home/includes/home_event_list_item.html" %}
+      {% endfor %}
+    </div>
+
+  </div>
+{% endif %}
+
+
+
+
+
+
+

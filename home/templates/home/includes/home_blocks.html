@@ -1,0 +1,21 @@
+{% load wagtailcore_tags%}
+<div class="container">
+    <div class="row">
+     {% for block in home_blocks %}
+
+      <div class="col-lg-6 col-sm-12">
+        <div class="card-group">
+
+          <div class="card-whole-white">
+            <div class="card-block">
+              <h2 class="card-title">{{block.title}}</h2>
+              <p class="card-text">{{block.body|richtext}}</p>
+              <a href="{{block.link}}" class="card-view-more">{{block.link_title}}</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+</div>

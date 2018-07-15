@@ -1,0 +1,34 @@
+{% extends "home/base.html" %}
+{% load wagtailcore_tags wagtailimages_tags %}
+{% load i18n %}
+{% block content %}
+
+
+
+
+    {# Uses method defined in models.py to retrieve all upcoming events #}
+    {# See also standard index for creating a listing with a tag #}
+    {% with self.exhibitions.all as events %}
+        {% if events %}
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12 events">
+          <h2 class="card-title"><a href="/events">{% trans 'Ongoing Exhibitions' %}</a></h2>
+        </div>
+      </div>
+      <div class="row">
+         {% for event in events %}
+            {% include "home/includes/permanent_exhibition_item.html" %}
+          {% endfor %}
+       </div>
+  </div>
+
+
+
+        {% endif %}
+    {% endwith %}
+
+
+{% endblock %}

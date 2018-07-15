@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+
+{% load home_tags wagtailcore_tags %}
+
+{% block content %}
+ <div class="container">
+    {% if self.body %}
+    <div class="row">
+        {{ self.body|richtext }}
+    </div>
+     
+    {% endif %}
+
+<div class="row">
+    <div class="col-lg-8 col-sm-12 card-y-margin">
+
+     {% include "home/includes/book_space.html" %}
+     </div>
+</div>
+
+    </div>
+  
+{% endblock %}

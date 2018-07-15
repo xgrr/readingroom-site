@@ -1,0 +1,14 @@
+{% load bootstrap %}
+{% load i18n %}
+
+<form method="post" id="contact_form" class="form-horizontal" novalidate="novalidate">
+    <legend>{% trans 'Make an inquiry' %}</legend>
+    {% csrf_token %}
+    {{ form|bootstrap_horizontal }}
+    <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" class="btn bg-green bg-green-hover border-none">{% trans 'Submit inquiry' %}</button>
+        </div>
+    </div>
+
+</form>
