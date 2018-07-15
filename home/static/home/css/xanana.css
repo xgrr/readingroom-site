@@ -1,0 +1,838 @@
+@font-face {
+    font-family:'Proxima Nova';src:url(../fonts/ProximaNovaRegular.ttf) format('truetype');font-weight:400;font-style:normal;text-rendering:optimizeLegibility
+}
+@font-face {
+    font-family:'Tiempos Headline';src:url(../fonts/TiemposHeadline-Bold.ttf) format('truetype');font-weight:500;font-style:normal;text-rendering:optimizeLegibility
+}
+@font-face {
+    font-family:'Apercu';src:url(../fonts/apercu-bold.ttf) format('truetype');font-weight:700;font-style:normal;text-rendering:optimizeLegibility
+}
+@font-face {
+    font-family: 'Brandon';
+    src: url(../fonts/BrandonGrotesqueRegular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family:'Brandon Bold';src:url(../fonts/BrandonGrotesqueBold.ttf) format('truetype')
+}
+
+/*html {
+    font-size: 62.5%
+}*/
+
+body {
+    font-family: "Proxima Nova",sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Tiempos Headline",sans-serif;
+    font-weight: 500
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.125em;
+    color: rgba(0,0,0,.7);
+}
+
+.section {
+    margin-bottom: 18px
+}
+
+a,a:hover {
+    color: #00a99e;
+    text-decoration: none
+}
+
+.navbar-brand,.navbar-inverse {
+    background-color: #00a99e;
+    font-family: "Tiempos Headline",sans-serif
+}
+
+.navbar-brand {
+    float: left;
+    z-index: 15;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.25em;
+    padding: 0
+}
+
+.navbar-inverse {
+    border-color: #00a99e
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.navbar-nav {
+    float: right;
+    font-family: "Tiempos Headline",sans-serif;
+    font-size: 1.25em;
+    padding-top:5px;
+}
+
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #00a99e
+}
+
+.navbar-inverse .nav-justified>.active>a,.navbar-inverse .nav-justified>.active>a:focus,.navbar-inverse .nav-justified>.active>a:hover,.navbar-inverse .nav-justified>.open>a,.navbar-inverse .nav-justified>.open>a:focus,.navbar-inverse .nav-justified>.open>a:hover {
+    color: #fff;
+    background-color: #00a99e
+}
+
+.footer h6,.navbar-nav>li>a {
+    color: #fff;
+    font-family: "Tiempos Headline",san-serif;
+    line-height: 1.2;
+}
+.footer h6,.nav-justified>li>a {
+    color: #fff;
+    font-family: "Tiempos Headline",san-serif;
+    font-size: 1.25em
+}
+
+.nav>li>a:active,.navbar-nav>li>a:hover {
+    text-decoration: underline
+}
+
+.nav>li>a:active,.nav-justified>li>a:hover {
+    text-decoration: underline
+}
+
+.nav>li>a:active {
+    background-color: transparent
+}
+
+.dropdown-menu>li>a,.navbar-inverse .navbar-nav>li>a {
+    color: #fff
+}
+
+.dropdown-menu>li>a,.navbar-inverse .nav-justified>li>a {
+    color: #fff
+}
+
+.dropdown-menu {
+    font-size: 1em
+}
+
+@media (max-width:767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+        color: #fff
+    }
+
+    .navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+        background-color: #fff
+    }
+}
+
+.navbar-inverse .navbar-collapse,.navbar-inverse .navbar-form,.navbar-inverse .navbar-toggle {
+    border-color: #fff
+}
+
+.dropdown-menu,.navbar-inverse .navbar-toggle:hover {
+    background-color: #00a99e
+}
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20
+}
+
+.navbar-wrapper>.container {
+    padding-right: 0;
+    padding-left: 0
+}
+
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px
+}
+
+.navbar-wrapper .navbar .container {
+    width: auto
+}
+
+.carousel {
+    height: 500px;
+    margin-bottom: 60px
+}
+
+.carousel-caption {
+    z-index: 10;
+    background-color: rgba(75,86,92,.85);
+    display: block;
+    position: absolute;
+    right: 15%;
+    bottom: 100px;
+    left: 15%;
+    margin-bottom: -15px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6)
+}
+
+.carousel .item {
+    height: 500px;
+    background-color: #777
+}
+
+.carousel-inner>.item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 600px
+}
+
+.carousel-caption p{
+    font-size: 1.125em !important;
+    color: #fff;
+}
+
+.carousel-caption h1,.footer h4 {
+    font-size: 1.5em
+}
+
+.foot {
+    background-color: #00a99e;
+    color: #fff
+}
+
+.footer {
+    background: #00a99e;
+    padding: 100px 0;
+    position: relative;
+    color: #fff
+}
+
+.footer h4 {
+    color: #fff;
+    font-family: "Tiempos Headline",sans-serif;
+    font-weight: 700
+}
+
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.footer ul li {
+    color: #fefefe;
+    font-size: 16px
+}
+
+.footer ul li a {
+    color: #fefefe
+}
+
+.text-gray-light,.text-gray-light a,.text-gray-light li,.text-gray-light ol,.text-gray-light span,.text-gray-light ul {
+    color: #e9eff3
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.marketing .col-lg-4 {
+    margin-bottom: 20px;
+    text-align: center
+}
+
+.marketing h2 {
+    font-weight: 400
+}
+
+.marketing .col-lg-4 p {
+    margin-right: 10px;
+    margin-left: 10px
+}
+
+.featurette-divider {
+    margin: 80px 0
+}
+
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px
+}
+
+@media (min-width:768px) {
+    .navbar-wrapper {
+        margin-top: 0
+    }
+
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px
+    }
+
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+        border-radius: 0
+    }
+
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4
+    }
+
+    .featurette-heading {
+        font-size: 50px
+    }
+}
+
+@media (min-width:992px) {
+    .featurette-heading {
+        margin-top: 120px
+    }
+}
+
+.center {
+    text-align: center
+}
+
+.left {
+    text-align: left
+}
+
+.right {
+    text-align: right
+}
+
+.blog-center {
+    width: 100%;
+    top: 0;
+    margin: 0 auto
+}
+
+.blog-card {
+    display: flex;
+    background: #fff
+}
+
+.blog-card-content {
+    width: 40%;
+    padding: 15px 20px 20px
+}
+
+.blog-card-image {
+    width: 60%
+}
+
+.blog-card-image img {
+    width: 100%
+}
+
+.event-center-column {
+    width: 100%;
+    top: 0;
+    margin: 0 auto
+}
+
+.event-headline {
+    /*margin-top: -150px;*/
+    background-color: #fff;
+    margin-bottom: 50px
+}
+
+.event-headline-content {
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    padding-top: 26px
+}
+
+.event-headline h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem
+}
+
+.event-headline h1,.event-headline h3,.event-title-date,.news-title-date {
+    font-family: "Tiempos Headline",sans-serif;
+    font-style: normal
+}
+
+.event-headline h3 {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2em
+}
+
+.event-title-date,.news-title-date {
+    font-size: 1.2em;
+    color: #999
+}
+
+.news-title-date {
+    text-align: center
+}
+
+.event-card,.news-card {
+    border: 1px solid #e9eff3;
+    position: relative;
+    margin: .5rem 0 1rem;
+    background-color: #fff;
+    transition: all .15s ease
+}
+
+.news-card {
+    height: 400px;
+    border-radius: 2px
+}
+
+.news-card .card-image {
+    max-height: 55%;
+    overflow: hidden;
+    position: relative
+}
+
+.news-card .card-content {
+    max-height: 45%;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 0 0 2px 2px
+}
+
+.event-card {
+    height: 300px;
+    border-radius: 1px
+}
+
+.event-card .card-image {
+    max-height: 70%;
+    overflow: hidden;
+    position: relative
+}
+
+.event-card .card-content {
+    max-height: 30%;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 0 0 2px 2px
+}
+
+.event-card .card-image img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%
+}
+.card-content h4{
+    color: rgba(0,0,0,.8);;
+}
+.event-card .card-action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,.2);
+    padding: 20px
+}
+
+.event-card .rich-text>p {
+    font-size: 1em
+}
+
+.xgrr-card,.xgrr-card-text {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e9eff3;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+    height: 470px;
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important
+}
+
+.xgrr-card-text {
+    height: auto
+}
+
+.module {
+    overflow: auto;
+    padding: 3rem!important
+}
+
+@media screen and (max-width:991px) and (min-width:768px) {
+    .module {
+        height: 470px
+    }
+}
+
+@media screen and (min-width:769px) {
+    .module {
+        height: 520px
+    }
+}
+
+.card-y-margin {
+    margin-top: 1rem!important;
+    margin-bottom: 1rem!important
+}
+
+.bg-orange {
+    background-color: #f7813b
+}
+
+.bg-green {
+    background-color: #00a99e
+}
+
+.border-radius {
+    border-radius: 3px
+}
+
+.border-none {
+    border: 0!important
+}
+
+.border-radius-none {
+    border-radius: 3px;
+    border: 0!important
+}
+
+.text-weight-bold {
+    font-weight: 500
+}
+
+.p-x-3 {
+    padding-right: 3rem!important
+}
+
+.p-l-3,.p-x-3 {
+    padding-left: 3rem!important
+}
+
+.p-y-1 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    padding: .375rem 1rem;
+    font-size: 1.9rem;
+    line-height: 2.2;
+    border-radius: .25rem
+}
+
+.btn,a.btn {
+    border: 2px solid #f7813b;
+    color: #fff;
+    font-family: "Proxima Nova",sans-serif;
+    font-size: 1em;
+    padding: 8px 25px
+}
+
+a.btn:hover {
+    color: #000
+}
+
+.btn-green,.btn-green:hover,a.btn-green,a.btn-green:hover {
+    border: 2px solid #00a99e;
+    color: #fff!important
+}
+
+.btn-green:hover,a.btn-green:hover {
+    background-color: #00a99e
+}
+
+.btn-orange,.btn-orange:hover,a.btn-orange,a.btn-orange:hover {
+    border: 2px solid #f7813b;
+    color: #fff!important
+}
+
+.btn-orange,a.btn-orange {
+    background-color: #f7813b
+}
+
+.btn-orange-white,a.btn-orange-white {
+    border: 2px solid #f7813b;
+    background-color: #fff;
+    color: #f7813b!important
+}
+
+a.btn-orange-white:hover {
+    color: #000!important
+}
+
+.body-image {
+    height: 200px
+}
+
+.bigger-body-image {
+    height: 300px;
+    margin: 15px;
+    shape-outside: circle()
+}
+
+.bg-white {
+    background-color: #fff
+}
+
+.border-orange {
+    border: 2px solid #f7813b
+}
+
+.text-orange {
+    color: #f7813b!important
+}
+
+.bg-darker {
+    background-color: #fff
+}
+
+.module-newsletter .form-group input[type=text] {
+    margin-top: 7px;
+    padding-right: 40px
+}
+
+.form-control,.form-group input[type=email],.input-button-and-label input[type=text] {
+    color: #0090ff;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+    height: 64px;
+    order: 2;
+    padding: 20px;
+    flex-grow: 1
+}
+
+.form-control {
+    height: 50px;
+    -webkit-box-ordinal-group: 3
+}
+
+.form-group button,.input-button-and-label input[type=email],.input-button-and-label input[type=text] {
+    display: inline-block;
+    width: auto
+}
+
+.text-just {
+    text-align: justify;
+    text-justify: inter-word
+}
+
+.leftie {
+    float: left
+}
+
+.rightie {
+    float: right
+}
+
+.card-group {
+    display: flex;
+    flex-direction: column
+}
+
+.card-vertical {
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff
+}
+
+.card-horizontal,.card-vertical,.card-whole {
+    display: flex;
+    margin-bottom: 18px
+}
+
+.card-horizontal {
+    overflow: hidden;
+    background: #fff
+}
+
+.card-whole {
+    background-color: #00a99e;
+    color: #fff
+}
+
+.card-whole p{
+    color: #fff;
+}
+
+.card-whole-white,.news-card-whole-white {
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 18px
+}
+
+.news-card-whole-white {
+    margin-bottom: 10px;
+    height: 250px
+}
+
+.card-whole .card-text {
+    font-size: 1.25em
+}
+
+.card-vertical .card-image {
+    display: flex;
+    height: 300px
+}
+
+.card-horizontal .card-image {
+    display: flex
+}
+
+.card-horizontal .card-img-top {
+    height: 300px;
+    width: 250px
+}
+
+.card-block,.card-footer,.card-header {
+    display: flex;
+    flex-direction: column;
+    padding: 18px 20px 20px;
+    border: 1px solid #e9eff3
+}
+
+.card-block-horizontal {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 20px
+}
+
+.card-title {
+    color: #292b2c
+}
+
+.card-view-more,.event-view-more {
+    font-family: 'Proxima Nova',sans-serif;
+    color: rgba(0,0,0,.7);
+    /*color: #00a99e;*/
+    font-size: 1.125em;
+    line-height: 24px;
+    display: inline-block;
+    margin-top: 10px
+}
+
+a.event-view-more:hover {
+    color: #00a99e;
+    text-decoration: underline
+}
+
+.card-view-more {
+    margin-top: 18px;
+    background: url(../images/learn_more.png) right 5px no-repeat;
+    padding-right: 32px
+}
+
+a.card-view-more:hover {
+    font-size: 125%
+}
+
+.card-date,.event-type {
+    display: block;
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #999;
+    padding: 18px 20px 20px
+}
+
+.event-type {
+    font-weight: 600;
+    font-size: .9em;
+    color: #fff;
+    padding: 5px 10px;
+    background: #00a99e;
+    display: inline-block
+}
+
+.card-time,.news-date {
+    display: block;
+    font-size: 1em;
+    color: #999
+}
+
+.card-time {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.event-headline-content h1,.events h2,.events h4,.news h2,.news h4 {
+    color: #00a99e;
+    margin: 15px 0
+}
+
+.card-block>h4 a,.card-content>h4 a,.event-headline-content>h1 a,.events>h2 a,.news>h2 a,a.card-view-more:hover {
+    color: #00a99e;
+    text-decoration: none
+}
+/*.bootstrap-select {
+    font-weight: 700;
+    font-size: 1.0em;
+    color: #fff;
+}*/
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .filter-option {
+    position: static;
+    font-weight: 700;
+    font-family: "Tiempos Headline", sans-serif;
+    font-size: 1em;
+    color: #fff;
+    margin-top: -2px;
+}
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .caret {
+    position: static;
+    top: auto;
+    margin-top: -10px;
+}
+/*.bootstrap-select>.dropdown-toggle {
+    width: 100%;
+    padding-right: 25px;
+    z-index: 1;
+    font-weight: 1.25em;
+}*/
+.bootstrap-select.btn-group .dropdown-menu li a {
+    background-color: transparent;
+    font-seze
+    line-height:20px;
+    display: block;
+    padding: 10px 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.bootstrap-select.btn-group .dropdown-menu li a:hover{
+    color: #fff;
+}
