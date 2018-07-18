@@ -19,15 +19,6 @@ urlpatterns = [
     url(r"^rosetta/", include("rosetta.urls")),
     url("^i18n/", include("django.conf.urls.i18n")),
     url(
-        r"^sw.js",
-        cache_control(max_age=25920000)(
-            TemplateView.as_view(
-                template_name="sw.js", content_type="application/javascript"
-            )
-        ),
-        name="sw.js",
-    ),
-    url(
         r"^manifest.json",
         cache_control(max_age=25920000)(
             TemplateView.as_view(
