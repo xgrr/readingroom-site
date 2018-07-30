@@ -1,9 +1,16 @@
+Install docker - this is for the "easy_install" method not so secure
+
+```
+curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh
+```
+
 Pull the repo
 
 Install some apty things like psycopg2 requirements
 
 ```
-apt-get install -y python3-venv
+apt install -y python-pip python3-venv
 python3 -m venv env
 source env/bin/activate
 pip install --upgrade pip
