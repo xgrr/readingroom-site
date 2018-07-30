@@ -96,11 +96,11 @@ WSGI_APPLICATION = "xanana.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "docker",
-        "PASSWORD": "docker",
+        "NAME": "mohinga_db",
+        "USER": "mohinga",
+        "PASSWORD": "mohinga",
         "HOST": "localhost",
-        "PORT": "32769",
+        "PORT": "5438",
     }
 }
 

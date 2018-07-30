@@ -1,0 +1,17 @@
+version: '3'
+services:
+  db:
+    environment: 
+        POSTGRES_USER: mohinga
+        POSTGRES_PASS: mohinga
+        POSTGRES_DBNAME: mohinga_db
+    image: kartoza/postgis:10.0-2.4
+    ports:
+    - "5438:5432"
+    volumes:
+      - readingroom-site-db:/source
+      - readingroom-db-postgresql:/var/lib/postgresql
+
+volumes:
+  readingroom-site-db:
+  readingroom-db-postgresql:

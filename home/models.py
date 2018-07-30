@@ -881,7 +881,7 @@ class BlogPage(Page):
         related_name="+",
     )
 
-    search_fields = Page.search_fields + [index.SearchField("body")]
+    search_fields = Page.search_fields + [index.SearchField("body_en"), index.SearchField("body_tet")]
 
     @property
     def blog_index(self):
@@ -1017,7 +1017,8 @@ class EventPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField("get_audience_display"),
         index.SearchField("location"),
-        index.SearchField("body"),
+        index.SearchField("body_en"), 
+        index.SearchField("body_tet")
     ]
 
     @property

@@ -22,7 +22,7 @@ Install some apty things like psycopg2 requirements
 apt install -y \
   python-pip \
   python3-venv \
-  libmysqlclient-dev \  
+  libmysqlclient-dev \
   postgresql-client-common
 ```
 
@@ -38,10 +38,10 @@ pip install flake8
 
 Run the postgresql database
 From the dir above the database git pull (which is likely `cd..`)
-```
-docker run --name readingroom_db -p 32769:5432 -v`pwd`/readingroom-site-db:/source kartoza/postgis:10.0-2.4
-```
-Restore the postgresql database
-```
-docker exec -u postgres readingroom_db bash -c sh -c "pg_restore /source -d postgres"
-```
+
+# From the docker-compose dir
+docker-compose up
+# From the readingroom-site-db repo
+docker cp . readingroom-site_db_1:/source
+docker-compose exec -u postgres db sh -c "pg_restore -d mohinga_db /source"
+
