@@ -45,5 +45,5 @@ docker run --name readingroom_db -p 32769:5432 -v`pwd`/readingroom-site-db:/sour
 ```
 Restore the postgresql database
 ```
-docker exec -u postgres readingroom_db bash -c "psql < /source.psql"
+docker exec -u postgres readingroom_db bash -c "pg_restore /source"
 ```
