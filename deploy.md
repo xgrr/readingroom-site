@@ -39,8 +39,9 @@ Copy over the database dump - it's currently called "xanana.psql"
 
 
 Run the postgresql database
+From the dir above the database git pull (which is likely `cd..`)
 ```
-docker run --name readingroom_db -p 32769:5432 -v `pwd`/xanana.psql:/source.psql kartoza/postgis:10.0-2.4
+docker run --name readingroom_db -p 32769:5432 -v`pwd`/readingroom-site-db:/source kartoza/postgis:10.0-2.4
 ```
 Restore the postgresql database
 ```
