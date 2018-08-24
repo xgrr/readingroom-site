@@ -175,3 +175,8 @@ LANGUAGES_BIDI = global_settings.LANGUAGES_BIDI + ["tet"]
 ROSETTA_ENABLE_REFLANG = True
 ROSETTA_ENABLE_TRANSLATION_SUGGESTIONS = True
 ROSETTA_SHOW_AT_ADMIN_PANEL = True
+
+try:
+    from . import settings_local
+except ImportError:
+    pass
