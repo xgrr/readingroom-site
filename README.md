@@ -38,7 +38,7 @@ DATABASES = {
 SECRET_KEY = "something-super-secret"
 
 ALLOWED_HOSTS = ['142.93.252.28',] # Put your IP address in here
-
+```
 ### Postgres Database
 ```
 (env) root@site:~/readingroom-site# su postgres
