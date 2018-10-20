@@ -68,9 +68,9 @@ LINE 1: exit;
 
 Or spool in a copy of the database
 
-```
+### Restore database
 
-Restore database
+
 ```
 su postgres
 # Then as postgres user:
@@ -83,4 +83,10 @@ psql -d xgrr_site -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO xgr
 
 Command line should now be available with `psql --user xgrr -d xgrr_site -h localhost -W`
 
+### Run the server
 
+```
+./manage.py makemigrations
+./manage.py migrate
+./manage.py runserver_plus
+```
