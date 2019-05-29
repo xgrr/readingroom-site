@@ -11,7 +11,7 @@ RUN useradd --create-home --shell /bin/bash django
 RUN chown django -R /usr/src
 USER django
 RUN python -m venv env && . env/bin/activate && pip install --no-cache-dir -r requirements.txt
-COPY . app
+COPY . /usr/src
 EXPOSE 8000
 CMD ["env/bin/uwsgi", "app/config/http-server.ini"]
 
