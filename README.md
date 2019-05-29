@@ -5,6 +5,14 @@ Reading room website
 
 Based on a fresh install of Ubuntu 18.04
 
+### Install Docker
+
+The easy way:
+```
+sudo curl -fsSL get.docker.com -o get-docker.sh && \
+sudo sh get-docker.sh
+```
+
 ### OS Prep
 
 ```
@@ -16,6 +24,7 @@ apt install -y nginx gcc python3-venv git libpq-dev python3-dev postgis
 ```
 python3 -m venv env
 source env/bin/activate && pip install wheel
+# If you are already in the repo dir, skip next 2 lines
 git clone https://github.com/xgrr/readingroom-site.git
 cd readingroom-site
 pip install -r requirements.txt

@@ -15,8 +15,15 @@ from __future__ import absolute_import, unicode_literals
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import django.conf.locale
+import logging
+logger = logging.getLogger(__name__)
 from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
+try:
+    from . import secrets
+except ImportError:
+    logger.error('Secrets could not be imported')
+    secrets = {}
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -94,15 +101,16 @@ WSGI_APPLICATION = "xanana.wsgi.application"
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mohinga_db",
-        "USER": "mohinga",
-        "PASSWORD": "mohinga",
-        "HOST": "localhost",
-        "PORT": "5438",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': getattr(secrets, 'DATABASE_NAME', os.environ.get('DATABASE_NAME', 'readingroom')),
+        'USER': getattr(secrets, 'DATABASE_USER', os.environ.get('DATABASE_USER', 'readingroom')),
+        'PASSWORD': getattr(secrets, 'DATABASE_PASWORD', os.environ.get('DATABASE_PASWORD', 'readingroom')),
+        'HOST': getattr(secrets, 'DATABASE_HOST', os.environ.get('DATABASE_HOST', 'localhost')),
+        'PORT': getattr(secrets, 'DATABASE_PORT', os.environ.get('DATABASE_PORT', '5432')),
     }
 }
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/

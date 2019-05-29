@@ -1,0 +1,31 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h2 id="set-up-host">Set up Host</h2>
+<p>Set up a digitalocean host and SSH into it
+ssh -A root@<your-ip-address></p>
+<p>Install docker - this is for the "easy_install" method, not so secure</p>
+<p><code>curl -fsSL get.docker.com -o get-docker.sh
+sh get-docker.sh</code></p>
+<p>Pull the repo and the database dump
+<code>git clone git@github.com:xgrr/readingroom-site.git
+git clone git@github.com:xgrr/readingroom-site-db.git</code></p>
+<p>Install some apty things like psycopg2 requirements
+<code>apt install -y \
+  python-pip \
+  python3-venv \
+  libmysqlclient-dev \
+  postgresql-client-common</code></p>
+<p><code>apt install -y python-pip python3-venv
+python3 -m venv env
+source env/bin/activate
+pip install --upgrade pip
+pip install wheel
+pip install -r requirements.txt
+pip install flake8</code></p>
+<p>Run the postgresql database
+From the dir above the database git pull (which is likely <code>cd..</code>)</p>
+<h1 id="from-the-docker-compose-dir">From the docker-compose dir</h1>
+<p>docker-compose up</p>
+<h1 id="from-the-readingroom-site-db-repo">From the readingroom-site-db repo</h1>
+<p>docker cp . readingroom-site_db_1:/source
+docker-compose exec -u postgres db sh -c "pg_restore -d mohinga_db /source"</p>
+</body></html>
