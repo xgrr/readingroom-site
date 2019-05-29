@@ -1,4 +1,4 @@
-FROM python:3.7.0
+FROM python:3.7
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -13,5 +13,5 @@ USER django
 RUN python -m venv env && . env/bin/activate && pip install --no-cache-dir -r requirements.txt
 COPY . app
 EXPOSE 8000
-CMD ["env/bin/uwsgi", "app/settings.ini"]
+CMD ["env/bin/uwsgi", "app/config/http-server.ini"]
 

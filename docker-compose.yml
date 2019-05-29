@@ -6,35 +6,36 @@ services:
         POSTGRES_USER: postgres
         POSTGRES_PASS: readingroom
         POSTGRES_DBNAME: readingroom
-    image: kartoza/postgis:10.0-2.4
+    image: postgres:11-alpine
     ports:
     - "5432"
     volumes:
-      - readingroom-site-db:/source
-      - readingroom-db-postgresql:/var/lib/postgresql
+      - rr-data:/var/lib/postgresql/data
     networks:
       - back
 
   web:
     restart: always
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    image: readingroom_site
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
     links:
       - rrdb
     ports:
       - "8000"
     volumes:
-      - ./web/app:/home/django/app
-      - /var/www/html/static:/var/www/html/static
-      - /var/www/html/media:/var/www/html/media
+      # - ./web/app:/home/django/app
+      - rr-static:/var/www/html/static
+      - rr-media:/var/www/html/media
     networks:
       - front
       - back
 
 volumes:
-  readingroom-site-db:
-  readingroom-db-postgresql:
+  rr-data:
+  rr-media:
+  rr-static:
 
 networks:
   front:
