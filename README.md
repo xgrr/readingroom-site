@@ -5,6 +5,14 @@ Reading room website
 
 Based on a fresh install of Ubuntu 18.04
 
+### Install Docker
+
+The easy way:
+```
+sudo curl -fsSL get.docker.com -o get-docker.sh && \
+sudo sh get-docker.sh
+```
+
 ### OS Prep
 
 ```
@@ -16,6 +24,7 @@ apt install -y nginx gcc python3-venv git libpq-dev python3-dev postgis
 ```
 python3 -m venv env
 source env/bin/activate && pip install wheel
+# If you are already in the repo dir, skip next 2 lines
 git clone https://github.com/xgrr/readingroom-site.git
 cd readingroom-site
 pip install -r requirements.txt
@@ -40,33 +49,15 @@ SECRET_KEY = "something-super-secret"
 ALLOWED_HOSTS = ['142.93.252.28',] # Put your IP address in here
 ```
 ### Postgres Database
-```
-(env) root@site:~/readingroom-site# su postgres
-postgres@site:/root/readingroom-site$ psql
-could not change directory to "/root/readingroom-site": Permission denied
-psql (10.5 (Ubuntu 10.5-0ubuntu0.18.04))
-Type "help" for help.
 
-postgres=# CREATE USER xgrr;
-CREATE ROLE
-postgres=# ALTER user xgrr PASSWORD 'whatever-your-password-is';
-ALTER ROLE
-postgres=# CREATE DATABASE xgrr_site USER xgrr;
-ERROR:  syntax error at or near "USER"
-LINE 1: CREATE DATABASE xgrr_site USER xgrr;
-                                  ^
-postgres=# CREATE DATABASE xgrr_site OWNER xgrr;
-CREATE DATABASE
-postgres=# exit;
-ERROR:  syntax error at or near "exit"
-LINE 1: exit;
-```
+#### Restoring from a Single File
+
 
 ```
-./manage.py migrate
+docker cp xanana.psql readingroom-site_rrdb_1:/tmp
+docker exec --user postgres readingroom-site_rrdb_1 sh -c "psql -d readingroom < /tmp/xanana.psql"
+docker exec readingroom-site_rrdb_1 sh -c "rm /tmp/xanana.psql"
 ```
-
-Or spool in a copy of the database
 
 ### Restore database
 

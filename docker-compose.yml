@@ -1,17 +1,43 @@
+
 version: '3'
 services:
-  db:
+  rrdb:
     environment: 
-        POSTGRES_USER: mohinga
-        POSTGRES_PASS: mohinga
-        POSTGRES_DBNAME: mohinga_db
-    image: kartoza/postgis:10.0-2.4
+        POSTGRES_USER: postgres
+        POSTGRES_PASS: readingroom
+        POSTGRES_DBNAME: readingroom
+    image: postgres:11-alpine
     ports:
-    - "5438:5432"
+    - "5432"
     volumes:
-      - readingroom-site-db:/source
-      - readingroom-db-postgresql:/var/lib/postgresql
+      - rr-data:/var/lib/postgresql/data
+    networks:
+      - back
+
+  web:
+    restart: always
+    image: readingroom_site
+    # build: 
+    #   context: .
+    #   dockerfile: Dockerfile
+    links:
+      - rrdb
+    ports:
+      - "8000"
+    volumes:
+      # - ./web/app:/home/django/app
+      - rr-static:/var/www/html/static
+      - rr-media:/var/www/html/media
+    networks:
+      - front
+      - back
 
 volumes:
-  readingroom-site-db:
-  readingroom-db-postgresql:
+  rr-data:
+  rr-media:
+  rr-static:
+
+networks:
+  front:
+  back:
+
