@@ -52,9 +52,32 @@ ALLOWED_HOSTS = ['142.93.252.28',] # Put your IP address in here
 
 #### Restoring from a Single File
 
+
 ```
 docker cp xanana.psql readingroom-site_rrdb_1:/tmp
 docker exec --user postgres readingroom-site_rrdb_1 sh -c "psql -d readingroom < /tmp/xanana.psql"
 docker exec readingroom-site_rrdb_1 sh -c "rm /tmp/xanana.psql"
 ```
 
+### Restore database
+
+
+```
+su postgres
+# Then as postgres user:
+git clone https://github.com/xgrr/readingroom-site-db.git
+cd readingroom-site-db
+createdb xgrr_site --owner=xgrr
+ppg_restore -d xgrr_site .
+psql -d xgrr_site -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO xgrr;"
+```
+
+Command line should now be available with `psql --user xgrr -d xgrr_site -h localhost -W`
+
+### Run the server
+
+```
+./manage.py makemigrations
+./manage.py migrate
+./manage.py runserver_plus
+```
