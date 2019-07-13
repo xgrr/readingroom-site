@@ -2,7 +2,7 @@ appdirs==1.4.0
 beautifulsoup4==4.5.3
 certifi==2017.11.5
 chardet==3.0.4
-Django==1.10.5
+Django==1.11.19
 django-bootstrap-form==3.2.1
 django-extensions==1.7.6
 django-modelcluster==3.1
@@ -10,7 +10,7 @@ django-modeltranslation==0.12.1
 django-rosetta==0.7.13
 django-taggit==0.22.1
 django-treebeard==4.1.0
-djangorestframework==3.5.3
+djangorestframework==3.9.1
 html5lib==0.999999999
 idna==2.6
 microsofttranslator==0.8
@@ -21,10 +21,10 @@ polib==1.0.8
 psycopg2-binary==2.7.5
 pyparsing==2.1.10
 pytz==2016.10
-requests==2.13.0
+requests==2.20.0
 six==1.10.0
 Unidecode==0.4.20
-urllib3==1.22
+urllib3==1.24.2
 uWSGI==2.0.17.1
 wagtail==1.11.1
 wagtail-modeltranslation==0.6.0rc2
