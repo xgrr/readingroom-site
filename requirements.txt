@@ -2,7 +2,7 @@ appdirs==1.4.0
 beautifulsoup4==4.5.3
 certifi==2017.11.5
 chardet==3.0.4
-Django==1.11.19
+Django==1.11.23
 django-bootstrap-form==3.2.1
 django-extensions==1.7.6
 django-modelcluster==3.1
