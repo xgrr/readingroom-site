@@ -19,21 +19,11 @@ import logging
 logger = logging.getLogger(__name__)
 from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
-try:
-    from . import secrets
-except ImportError:
-    logger.error('Secrets could not be imported')
-    secrets = {}
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
-
-
 # Application definition
-
 INSTALLED_APPS = [
     "home",
     "search",
@@ -66,7 +56,6 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
-    "django.contrib.auth.middleware.SessionAuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.security.SecurityMiddleware",
@@ -103,11 +92,11 @@ WSGI_APPLICATION = "xanana.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': getattr(secrets, 'DATABASE_NAME', os.environ.get('DATABASE_NAME', 'readingroom')),
-        'USER': getattr(secrets, 'DATABASE_USER', os.environ.get('DATABASE_USER', 'readingroom')),
-        'PASSWORD': getattr(secrets, 'DATABASE_PASWORD', os.environ.get('DATABASE_PASWORD', 'readingroom')),
-        'HOST': getattr(secrets, 'DATABASE_HOST', os.environ.get('DATABASE_HOST', 'localhost')),
-        'PORT': getattr(secrets, 'DATABASE_PORT', os.environ.get('DATABASE_PORT', '5432')),
+        'NAME': os.environ.get('POSTGRES_DB', 'readingroom'),
+        'USER': os.environ.get('POSTGRES_USER', 'readingroom'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'readingroom'),
+        'HOST': os.environ.get('DATABASE_HOST', 'localhost'),
+        'PORT': os.environ.get('DATABASE_PORT', '5432'),
     }
 }
 

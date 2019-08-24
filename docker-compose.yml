@@ -3,14 +3,15 @@ version: '3'
 services:
   rrdb:
     environment: 
-        POSTGRES_USER: postgres
-        POSTGRES_PASS: readingroom
-        POSTGRES_DBNAME: readingroom
-    image: postgres:11-alpine
+        - POSTGRES_USER
+        - POSTGRES_PASSWORD
+        - POSTGRES_DB
+    image: ${POSTGRES_IMAGE}
     ports:
-    - "5432"
+    - "${POSTGRES_PORT}:5432"
     volumes:
       - rr-data:/var/lib/postgresql/data
+      - ../readingroom-site-db:/source
     networks:
       - back
 
