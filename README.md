@@ -70,14 +70,23 @@ cd readingroom-site-db
 createdb xgrr_site --owner=xgrr
 ppg_restore -d xgrr_site .
 psql -d xgrr_site -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO xgrr;"
+
+pg_restore --user ${POSTGRES_USER} -W -d ${POSTGRES_DB} /source/
 ```
 
 Command line should now be available with `psql --user xgrr -d xgrr_site -h localhost -W`
+
+
+### Restore Media
+
+
 
 ### Run the server
 
 ```
 ./manage.py makemigrations
 ./manage.py migrate
+./manage.py makemessages -i env -l tet # ignoring the 'env' directory, make tetun translations
+./manage.py compilemessages
 ./manage.py runserver_plus
 ```
