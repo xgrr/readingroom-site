@@ -15,8 +15,6 @@ from django.core.wsgi import get_wsgi_application
 import dotenv
 
 # Load up environment variables from the closest `.env` file
-dotenv.load_dotenv(dotenv.find_dotenv())
-
+dotenv.load_dotenv()
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "xanana.settings.dev")
-
 application = get_wsgi_application()

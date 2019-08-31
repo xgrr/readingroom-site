@@ -19,6 +19,7 @@ import logging
 logger = logging.getLogger(__name__)
 from django.utils.translation import ugettext_lazy as _
 from django.conf import global_settings
+import pathlib
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
