@@ -1,0 +1,78 @@
+    1  pip install python3
+    2  apt install python3-venv
+    3  apt install python3
+    4  python3
+    5  python3 -m pip
+    6  python3 -mvenv env
+    7  apt install python3-venv
+    8  apt update
+    9  apt install python3-venv
+   10  python3 -m venv env
+   11  ./manage.py runserver
+   12  git clone git@github.com:xgrr/readingroom-site.git
+   13  apt install postgresql-server
+   14  cd /tmp
+   15  wget get.docker.com
+   16  more index.html 
+   17  chmod +x index.html 
+   18  sh in
+   19  sh ./index.html
+   20  sudo curl -fsSL get.docker.com -o get-docker.sh && sudo sh get-docker.sh
+   21  apt update
+   22  apt install -y nginx gcc python3-venv git libpq-dev python3-dev postgis
+   23  apt install certbot
+   24  apt install nginx
+   25  certbot --help
+   26  certbot
+   27  certbot --nginx
+   28  certbot install nginx
+   29  apt install python-certbot-nginx
+   30  certbot --nginx
+   31  certbot --nginx --help
+   32  certbot --nginx -m josh.vdbroek@gmail.com
+   33  certbot --nginx -m josh.vdbroek@gmail.com --agree-tos -d readingroom.lafaek.dev
+   34  certbot --help
+   35  certbot renew
+   36  certbot renew --help
+   37  certbot-auto
+   38  ls -la
+   39  cd ~
+   40  ls -la
+   41  cd readingroom-site/
+   42  ls -la
+   43  python3 -m venv env
+   44  python3 -m pip install pipenv
+   45  apt instapp python3-pip
+   46  apt install python3-pip
+   47  pipenv install -r requirements.txt 
+   48  python3 -m pip install pipenv
+   49  pipenv install requirements.txt 
+   50  pipenv install django djangorestframework wagtail
+   51  rm Pipfile 
+   52  pipenv install django
+   53  pipenv install wagtail
+   54  pipenv list
+   55  pipenv grahp
+   56  pipenv graph
+   57  ./manage.py runserver
+   58  pipenv shell ./manage.py runserver
+   59  ./manage.py runserver
+   60  deactivate 
+   61  exit
+   62  cd readingroom-site/
+   63  pipenv shell
+   64  . env/bin/activate
+   65  pip install -re re
+   66  pip install -r requirements.txt 
+   67  pip install wheel
+   68  pip install -r requirements.txt 
+   69  apt install -y nginx gcc python3-venv git libpq-dev python3-dev postgis python3-pip
+   70  crontab -e
+   71  docker pull postgres:12-alpine
+   72  docker pull python:3.7-alpine
+   73  docker run python:3.7-alpine 
+   74  docker run -it python:3.7-alpine bash
+   75  docker run -it python:3.7-alpine sh
+   76  deactivate
+   77  ls -la
+   78  history

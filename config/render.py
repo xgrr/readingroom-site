@@ -7,6 +7,7 @@ Render out some of the templates etc we want to use for a Django/Nginx deploymen
 from jinja2 import Environment, PackageLoader, select_autoescape
 import dotenv
 from pathlib import Path
+import os
 
 dotenv.load_dotenv()
 
@@ -15,16 +16,24 @@ env = Environment(
     autoescape=select_autoescape(['html', 'xml'])
 )
 
+global_settings = dict(os.environ)
+
+# Set the django port and host, or just the django socket
+try:
+    assert ('django_port' in global_settings and 'django_host' in global_settings) or 'django_sock' in global_settings
+except:
+    print(dict(os.environ).keys())
+    raise
+uwsgi_settings = dict()
 nginx_settings = dict(
-    django_port=8001,
-    nginx_port=8000,
     media_path = (Path('.') / 'media').absolute(),
     static_path = (Path('.') / 'static').absolute(),
     uwsgi_params_path = '/etc/nginx/uwsgi_params',
-    server_name='localhost',
+    
 )
 
-template = env.get_template('nginx.conf')
-string = template.render(nginx_settings)
+uwsgi_settings.update(**global_settings)
+nginx_settings.update(**global_settings)
 
-print(string)
+env.get_template('nginx.conf').stream(nginx_settings).dump('rendered/nginx.conf')
+env.get_template('http-server.ini').stream(uwsgi_settings).dump('../http-server.ini')

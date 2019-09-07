@@ -208,3 +208,7 @@ Select "N" for the email and "2" for redirect
 
 ## Gunicorn Config
 https://docs.gunicorn.org/en/stable/deploy.html#systemd
+
+
+pip install gunicorn
+gunicorn --daemon --workers 3 --bind unix:/tmp/django.sock xanana.wsgi
