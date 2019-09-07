@@ -17,10 +17,11 @@ env = Environment(
 )
 
 global_settings = dict(os.environ)
-
+global_settings['base'] = Path('.').absolute().parent
+print (global_settings['base'])
 # Set the django port and host, or just the django socket
 try:
-    assert ('django_port' in global_settings and 'django_host' in global_settings) or 'django_sock' in global_settings
+    assert ('django_serve_port' in global_settings and 'django_server' in global_settings) or 'django_sock' in global_settings
 except:
     print(dict(os.environ).keys())
     raise
