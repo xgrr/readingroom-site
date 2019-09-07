@@ -5,3 +5,4 @@ wagtail-modeltranslation==0.10.2
 wagtail==1.13.4
 django-bootstrap-form==3.4
 python-dotenv
+django_extensions
