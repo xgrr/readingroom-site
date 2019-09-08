@@ -169,10 +169,11 @@ django.conf.locale.LANG_INFO.update(EXTRA_LANG_INFO)
 # Languages using BiDi (right-to-left) layout
 LANGUAGES_BIDI = global_settings.LANGUAGES_BIDI + ["tet"]
 
-
 ROSETTA_ENABLE_REFLANG = True
 ROSETTA_ENABLE_TRANSLATION_SUGGESTIONS = True
 ROSETTA_SHOW_AT_ADMIN_PANEL = True
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', os.environ.get("HOSTNAME", "*.lafaek.dev")]
 
 try:
     from . import settings_local

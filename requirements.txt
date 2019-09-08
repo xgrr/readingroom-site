@@ -18,6 +18,8 @@ django==1.11.23
 djangorestframework==3.6.4  # via wagtail
 html5lib==0.999999999     # via wagtail
 idna==2.6                 # via requests
+jinja2==2.10.1
+markupsafe==1.1.1         # via jinja2
 olefile==0.46             # via pillow
 pillow==4.0.0             # via wagtail
 polib==1.1.0              # via django-rosetta
@@ -28,6 +30,7 @@ requests==2.22.0          # via django-rosetta, wagtail
 six==1.12.0               # via django-extensions, django-rosetta, html5lib
 unidecode==1.1.1          # via wagtail
 urllib3==1.25.3           # via requests
+uwsgi==2.0.18
 wagtail-modeltranslation==0.10.2
 wagtail==1.13.4
 webencodings==0.5         # via html5lib
