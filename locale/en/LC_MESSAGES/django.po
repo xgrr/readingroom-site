@@ -9,200 +9,199 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-12 02:58+0000\n"
-"PO-Revision-Date: 2018-01-26 11:34+0000\n"
-"Last-Translator: <mossplix@gmail.com>\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Translated-Using: django-rosetta 0.7.13\n"
 
 #: home/models.py:80
 msgid "External link"
-msgstr "Link Eksternal"
+msgstr ""
 
 #: home/models.py:108 home/models.py:139 home/models.py:962
 msgid "Name"
-msgstr "Naran"
+msgstr ""
 
 #: home/models.py:110 home/models.py:141
 msgid "Organisation"
-msgstr "Organizasaun"
+msgstr ""
 
 #: home/models.py:113 home/models.py:129 home/models.py:144
 msgid "Email Address"
-msgstr "Enderesu Email"
+msgstr ""
 
 #: home/models.py:115 home/models.py:131 home/models.py:146
 msgid "Phone Number"
-msgstr "Numeru Telefone"
+msgstr ""
 
 #: home/models.py:117 home/models.py:148
 msgid "Prefered Form of Contact"
-msgstr " Perefensia Forma ba Kontaktu "
+msgstr ""
 
 #: home/models.py:119
 msgid "Message"
-msgstr "Mensajen"
+msgstr ""
 
 #: home/models.py:127
 msgid "name"
-msgstr "naran"
+msgstr ""
 
 #: home/models.py:150
 msgid "Body of Inquiry"
-msgstr "Konteudu Pedidu"
+msgstr ""
 
 #: home/models.py:164 home/models.py:176 home/models.py:189
 msgid "Enter your name"
-msgstr "Hatama Ita-boot nia Naran"
+msgstr ""
 
 #: home/models.py:165 home/models.py:177 home/models.py:190
 msgid "Enter your email"
-msgstr "Hatama ita-boot nia email"
+msgstr ""
 
 #: home/models.py:166 home/models.py:178 home/models.py:191
 msgid "Enter your phone"
-msgstr "Hatama ita-boot nia numeru telefone"
+msgstr ""
 
 #: home/models.py:179 home/models.py:192
 msgid "Enter the message"
-msgstr "Hakerek Mensajem"
+msgstr ""
 
 #: home/models.py:273
 msgid "Embed URL"
-msgstr "URL Incomporado"
+msgstr ""
 
 #: home/models.py:301 home/models.py:302
 msgid "Title"
-msgstr "Titulu"
+msgstr ""
 
 #: home/models.py:308 home/models.py:309
 msgid "Link title"
-msgstr "Titulu Link"
+msgstr ""
 
 #: home/models.py:327 home/templates/home/includes/contact.html:33
 msgid "Telephone"
-msgstr "Telefone"
+msgstr ""
 
 #: home/models.py:328 home/templates/home/includes/contact.html:38
 msgid "Email"
-msgstr "Email"
+msgstr ""
 
 #: home/models.py:330
 msgid "Address 1"
-msgstr "Enderesu 1"
+msgstr ""
 
 #: home/models.py:333
 msgid "Address 2"
-msgstr "Enderesu 2"
+msgstr ""
 
 #: home/models.py:335 home/templates/home/includes/contact.html:17
 msgid "City"
-msgstr "Sidade"
+msgstr ""
 
 #: home/models.py:336 home/templates/home/includes/contact.html:22
 msgid "Country"
-msgstr "Nasaun"
+msgstr ""
 
 #: home/models.py:337 home/templates/home/includes/contact.html:27
 msgid "Post Code"
-msgstr "Kodigu Postal"
+msgstr ""
 
 #: home/models.py:462 home/models.py:992
 msgid "Start time"
-msgstr "Oras Hahu"
+msgstr ""
 
 #: home/models.py:463 home/models.py:993
 msgid "End time"
-msgstr "Oras Ramata"
+msgstr ""
 
 #: home/models.py:466
 msgid "Cost"
-msgstr "Folin"
+msgstr ""
 
 #: home/models.py:624
 msgid "carousel_items"
-msgstr "Item Carousel"
+msgstr ""
 
 #: home/models.py:640 home/models.py:716
 msgid "Optional - form submissions will be emailed to this address"
-msgstr "Opsional-formulariu submisaun sei email ba endersu ida ne'e"
+msgstr ""
 
 #: home/models.py:963
 msgid "Surname"
-msgstr "Apelidu"
+msgstr ""
 
 #: home/models.py:987
 msgid "End date"
-msgstr "Data Ramata"
+msgstr ""
 
 #: home/models.py:990
 msgid "Not required if event is on a single day"
-msgstr "La persija se eventu ne'e ba loron ida"
+msgstr ""
 
 #: home/templates/home/base.html:26 home/templates/home/base.html:75
 #: home/templates/home/base.html:77
 msgid "Reading Room"
-msgstr "Sala Leitura"
+msgstr ""
 
 #: home/templates/home/base.html:101
 msgid "Resources"
-msgstr "Rekursu"
+msgstr ""
 
 #: home/templates/home/base.html:103
 msgid "Learning Resources"
-msgstr "Rekursu ba Buka Matenek"
+msgstr ""
 
 #: home/templates/home/base.html:104
 msgid "Book Our Space"
-msgstr "Reserva Ami-nia espasu"
+msgstr ""
 
 #: home/templates/home/base.html:105 home/templates/home/home_page.html:26
 #: home/templates/home/library_page.html:17
 msgid "Become a Member"
-msgstr "Sai Membru"
+msgstr ""
 
 #: home/templates/home/base.html:106
 msgid "Tourist Information"
-msgstr "Informasaun Turista"
+msgstr ""
 
 #: home/templates/home/base.html:115
 msgid "beside Kmanek Supermarket"
-msgstr "Kmanek Supermarket nia sorin"
+msgstr ""
 
 #: home/templates/home/base.html:124
 msgid "Make an Inquiry"
-msgstr "Halo Peskiza"
+msgstr ""
 
 #: home/templates/home/base.html:125
 msgid "Talk to Us"
-msgstr "Koalia mai ami"
+msgstr ""
 
 #: home/templates/home/base.html:126
 msgid "Support the Reading Room"
-msgstr "Apoiu Sala Leitura"
+msgstr ""
 
 #: home/templates/home/blog_index_page.html:35
 msgid "No blogs found"
-msgstr "La hetan blog ruma"
+msgstr ""
 
 #: home/templates/home/blog_page.html:43
 msgid "View All News"
-msgstr "Hare Notisia Hotu-hotu"
+msgstr ""
 
 #: home/templates/home/event_index_page.html:18
 msgid "Latest Events"
-msgstr "Eventu Ikus Nian"
+msgstr ""
 
 #: home/templates/home/event_page.html:43
 msgid "View All Events"
-msgstr "Hare Eventu Hotu-hotu "
+msgstr ""
 
 #: home/templates/home/home_page.html:23
 msgid "Stay in Touch"
-msgstr "Manten Kontaktu"
+msgstr ""
 
 #: home/templates/home/home_page.html:24
 msgid ""
@@ -213,92 +212,83 @@ msgid ""
 "upheld today in everything that we do. Sign up to our newsletter to keep in "
 "touch with what we are doing."
 msgstr ""
-"Sala Leitura Xanana Gusmao hanesan fatin livre ba biblioteka publiku, museum "
-"no hanesan espasu komunidade nian iha Dili, Timor-Leste. Sala Leitura hahuu "
-"loke iha fulan Junho 2000 husi fundador Sra. Kirsty Sword Gusmao ho objetivu "
-"sai hanesan fatin seguru, espasu livre ba komunidade atu aprende no "
-"dezenvolve kultura ne'ebe mak kontinua mantem to . . ohin loron  ho buat "
-"hotu ne'ebe mak ita halo. Rejistu mai ami nia newsletter atu manten kontaktu "
-"ho saida mak ami halo."
 
 #: home/templates/home/home_page.html:35
 #: home/templates/home/library_page.html:27
 msgid "The Library"
-msgstr "Bibleoteka"
+msgstr ""
 
 #: home/templates/home/home_page.html:38
 #: home/templates/home/library_page.html:30
 #: home/templates/home/museum_page.html:30
 msgid "Open Hours"
-msgstr "Oras Hahuu"
+msgstr ""
 
 #: home/templates/home/home_page.html:39
 #: home/templates/home/library_page.html:31
 #: home/templates/home/museum_page.html:31
 msgid "Monday–Saturday: 9am – 5pm"
-msgstr " Segunda-Sabadu: 09 dader to'o 05 lorokraik"
+msgstr ""
 
 #: home/templates/home/home_page.html:40
 #: home/templates/home/library_page.html:32
 #: home/templates/home/museum_page.html:32
 msgid "Sunday: Closed"
-msgstr "Domingo : Taka"
+msgstr ""
 
 #: home/templates/home/home_page.html:42
 msgid ""
 "The Xanana Gusmão Reading Room is closed on public holidays in Timor-Leste."
 msgstr ""
-"Sala de Leitura Xanana Gusmao sei taka wainhira  iha \n"
-" loron feriadu publiku Timor Leste."
 
 #: home/templates/home/includes/blog_list_item.html:18
 msgid "Keep Reading"
-msgstr "Konitnua Lee"
+msgstr ""
 
 #: home/templates/home/includes/book_space.html:11
 msgid "Send Message"
-msgstr "Manda Mensajen"
+msgstr ""
 
 #: home/templates/home/includes/book_space_form.html:10
 msgid "Submit Booking Inquiry"
-msgstr "Hatama Pedidu ba Rezerva Fatin"
+msgstr ""
 
 #: home/templates/home/includes/contact.html:7
 #: home/templates/home/includes/contact.html:12
 msgid "Address"
-msgstr "Enderesu"
+msgstr ""
 
 #: home/templates/home/includes/contact_form.html:5
 msgid "Make an inquiry"
-msgstr "Halo Pedidu"
+msgstr ""
 
 #: home/templates/home/includes/contact_form.html:10
 msgid "Submit inquiry"
-msgstr "Hatama Pedidu"
+msgstr ""
 
 #: home/templates/home/includes/membership_form.html:5
 msgid "Become A Member"
-msgstr " Rejistu Sai Membru"
+msgstr ""
 
 #: home/templates/home/includes/membership_form.html:10
 msgid "Submit Membership"
-msgstr "Hatama Rejistu Membru"
+msgstr ""
 
 #: home/templates/home/includes/prev_next.html:11
 msgid "Previous"
-msgstr "Prevista"
+msgstr ""
 
 #: home/templates/home/includes/prev_next.html:17
 msgid "Next"
-msgstr "Tuir mai"
+msgstr ""
 
 #: home/templates/home/includes/related_links.html:8
 msgid "Related links"
-msgstr "Link Ligasaun"
+msgstr ""
 
 #: home/templates/home/library_page.html:13
 msgid "Interactive Space"
-msgstr "Espasu Interativu"
+msgstr ""
 
 #: home/templates/home/library_page.html:15
 msgid ""
@@ -306,45 +296,40 @@ msgid ""
 "surveys and promote discussion around a vast array of topics. Sign up as a "
 "member to find out more."
 msgstr ""
-"Iha ami nia espasu interativu, ami hakarak atu iha klubu livru, halao survei "
-"user no promove diskusaun ho topiku oin-oin. Rejistu sai membru atu hetan "
-"liu tan. "
 
 #: home/templates/home/library_page.html:34
 #: home/templates/home/museum_page.html:34
 msgid "The Reading Room is closed on public holidays in Timor-Leste."
-msgstr "Sala Leitura taka iha loron feriadu publiku iha Timor Leste. "
+msgstr ""
 
 #: home/templates/home/museum_page.html:14
 msgid "Book Exhibition Space"
-msgstr "Espasu exposisaun Livru"
+msgstr ""
 
 #: home/templates/home/museum_page.html:16
 msgid ""
 "We would love to discuss having your exhibition in our space. Inquire today!"
 msgstr ""
-" Ami hakarak halo diskusaun ho ita nia exposisaun iha mai nia Espasu. Husu "
-"agora! "
 
 #: home/templates/home/museum_page.html:18
 msgid "Book Now"
-msgstr "Rezerva agora"
+msgstr ""
 
 #: home/templates/home/museum_page.html:27
 msgid "The Museum"
-msgstr "Muzeu"
+msgstr ""
 
 #: home/templates/home/permanent_exhibition_index.html:18
 msgid "Ongoing Exhibitions"
-msgstr "Espozisaun ne'ebe halao hela"
+msgstr ""
 
 #: home/templates/home/permanent_exhibition_page.html:31
 msgid "View All Permanent Exhibitions"
-msgstr "Hare Espozisaun Permanente hotu-hotu"
+msgstr ""
 
 #: home/templates/home/tags/blog_listing_homepage.html:8
 msgid "Our News"
-msgstr "Ami-nia Notisia"
+msgstr ""
 
 #: home/templates/home/tags/event_listing_homepage.html:6
 msgid "Events at XGRR"
@@ -352,23 +337,20 @@ msgstr ""
 
 #: home/templates/home/tags/top_menu.html:22
 msgid "Home"
-msgstr "Inisiu"
+msgstr ""
 
 #: home/templates/home/temporary_exhibition_index.html:16
 msgid "Upcoming Exhibitions"
-msgstr "Espozisaun Tuir mai"
+msgstr ""
 
 #: home/templates/home/temporary_exhibition_page.html:34
 msgid "View All Temporary Exhibitions"
-msgstr " Hare Espozisaun temporariu hotu-hotu"
+msgstr ""
 
 #: xanana/settings/base.py:147
 msgid "Tetun"
-msgstr "Tetun"
+msgstr ""
 
 #: xanana/settings/base.py:149
 msgid "English"
-msgstr "Ingles"
-
-#~ msgid "What is on?"
-#~ msgstr "Saida mak Akontese? "
+msgstr ""

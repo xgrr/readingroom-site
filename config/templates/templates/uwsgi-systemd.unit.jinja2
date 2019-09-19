@@ -1,0 +1,16 @@
+[Unit]
+Description=uwsgi-{{POSTGRES_USER}}
+After=network.target
+
+[Service]
+Environment=rundir=/run/uwsgi
+ExecStartPre=-/bin/mkdir -p -m 0750 ${rundir}
+ExecStartPre=-/bin/chown :www-data ${rundir}
+ExecStart={{paths.uwsgi}} --die-on-term --ini "{{paths.base}}/uwsgi.ini"
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=1
+StartLimitInterval=0
+
+[Install]
+WantedBy=multi-user.target

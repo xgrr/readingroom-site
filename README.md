@@ -124,31 +124,40 @@ As the postgres user restore the xanana.psql file to the database you created ea
 psql -d xgrr_site < ./xanana.psql
 ```
 
-
 ```
 docker cp xanana.psql readingroom-site_rrdb_1:/tmp
-docker exec --user postgres readingroom-site_rrdb_1 sh -c "psql -d readingroom < /tmp/xanana.psql"
+docker exec readingroom-site_rrdb_1 sh -c 'psql -U ${POSTGRES_USER} -d ${POSTGRES_DB} < /tmp/xanana.psql'
 docker exec readingroom-site_rrdb_1 sh -c "rm /tmp/xanana.psql"
 ```
 
-### Restore database
+Result:
+
+./manage.py dbshell works
 
 
-```
-su postgres
-# Then as postgres user:
-git clone https://github.com/xgrr/readingroom-site-db.git
-cd readingroom-site-db
-createdb xgrr_site --owner=xgrr
-ppg_restore -d xgrr_site .
-psql -d xgrr_site -c "GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO xgrr;"
+### Restoring from dumpdata
 
-pg_restore --user ${POSTGRES_USER} -W -d ${POSTGRES_DB} /source/
-```
+./manage.py dumpdata > data.json
 
-Command line should now be available with `psql --user xgrr -d xgrr_site -h localhost -W`
+Dump your old database and start a new one
 
-Clean up permissions
+docker-compose down -v
+docker-compose up
+
+./manage.py makemigrations
+./manage.py migrate
+
+Drop the "contenttypes" (created by migrations, but clash with the dump)
+
+./manage.py dbshell
+TRUNCATE django_content_type CASCADE
+
+./manage.py loaddata data.json
+
+### Cleaning Permissions
+
+Clean up permissions if necessary (eg if the database user changes)
+
 ```
 postgres@ubuntu-s-1vcpu-2gb-nyc1-01:/tmp/readingroom-site$ psql -d xgrr_site
 psql (10.10 (Ubuntu 10.10-0ubuntu0.18.04.1))
@@ -172,6 +181,13 @@ ORDER BY oid;
 
 ### Restore Media
 
+copy to your web server's /media directory
+make this readable, not writable by your web server
+
+
+### Restore static
+
+./manage.py collectstatic
 
 
 ### Run the server
