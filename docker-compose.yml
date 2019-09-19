@@ -15,23 +15,23 @@ services:
     networks:
       - back
 
-  web:
-    restart: always
-    image: readingroom_site
-    # build: 
-    #   context: .
-    #   dockerfile: Dockerfile
-    links:
-      - rrdb
-    ports:
-      - "8000"
-    volumes:
-      # - ./web/app:/home/django/app
-      - rr-static:/var/www/html/static
-      - rr-media:/var/www/html/media
-    networks:
-      - front
-      - back
+  # web:
+  #   restart: always
+  #   image: readingroom_site
+  #   # build: 
+  #   #   context: .
+  #   #   dockerfile: Dockerfile
+  #   links:
+  #     - rrdb
+  #   ports:
+  #     - "8000"
+  #   volumes:
+  #     # - ./web/app:/home/django/app
+  #     - rr-static:/var/www/html/static
+  #     - rr-media:/var/www/html/media
+  #   networks:
+  #     - front
+  #     - back
 
 volumes:
   rr-data:
