@@ -29,6 +29,6 @@ uWSGI==2.0.17.1
 wagtail==1.11.1
 wagtail-modeltranslation==0.6.0rc2
 webencodings==0.5
-Werkzeug==0.11.15
+Werkzeug==0.15.3
 Willow==0.4
 docker-compose==1.22.0
