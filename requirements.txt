@@ -26,7 +26,7 @@ six==1.10.0
 Unidecode==0.4.20
 urllib3==1.24.2
 uWSGI==2.0.17.1
-wagtail==1.11.1
+wagtail==2.7.4
 wagtail-modeltranslation==0.6.0rc2
 webencodings==0.5
 Werkzeug==0.11.15
