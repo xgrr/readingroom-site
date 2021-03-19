@@ -10,7 +10,7 @@ django-modeltranslation==0.12.1
 django-rosetta==0.7.13
 django-taggit==0.22.1
 django-treebeard==4.1.0
-djangorestframework==3.9.1
+djangorestframework==3.11.2
 html5lib==0.999999999
 idna==2.6
 microsofttranslator==0.8
